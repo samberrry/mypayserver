@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="mypaydbmap.PurchaseEntity" table="purchase" schema="mypay">
+        <id name="idpurchase">
+            <column name="idpurchase" sql-type="int(11)"/>
+        </id>
+        <property name="total">
+            <column name="total" sql-type="int(11)"/>
+        </property>
+        <property name="bank">
+            <column name="bank" sql-type="varchar(45)" length="45" not-null="true"/>
+        </property>
+        <property name="date">
+            <column name="date" sql-type="varchar(10)" length="10" not-null="true"/>
+        </property>
+        <property name="iduser">
+            <column name="iduser" sql-type="int(11)"/>
+        </property>
+        <property name="type">
+            <column name="type" sql-type="varchar(20)" length="20"/>
+        </property>
+        <property name="transactionid">
+            <column name="transactionid" sql-type="int(11)"/>
+        </property>
+    </class>
+</hibernate-mapping>

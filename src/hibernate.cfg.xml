@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+    "-//Hibernate/Hibernate Configuration DTD//EN"
+    "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="connection.url">jdbc:mysql://localhost:3306/mypay</property>
+    <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+    <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+    <property name="hibernate.connection.username">root</property>
+    <property name="hibernate.connection.password">r1234</property>
+    <!--<mapping resource="mypaydbmap/BeaconEntity.hbm.xml"/>-->
+    <!--<mapping resource="mypaydbmap/GoodsEntity.hbm.xml"/>-->
+    <mapping resource="mypaydbmap/LogEntity.hbm.xml"/>
+    <!--<mapping resource="mypaydbmap/PresenceEntity.hbm.xml"/>-->
+    <!--<mapping resource="mypaydbmap/PurchaseEntity.hbm.xml"/>-->
+    <!--<mapping resource="mypaydbmap/PurchaseHasGoodsEntity.hbm.xml"/>-->
+    <!--<mapping resource="mypaydbmap/StoreEntity.hbm.xml"/>-->
+    <mapping resource="mypaydbmap/UserEntity.hbm.xml"/>
+  </session-factory>
+</hibernate-configuration>

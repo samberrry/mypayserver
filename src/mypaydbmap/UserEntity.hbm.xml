@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="mypaydbmap.UserEntity" table="user" schema="mypay">
+        <id name="iduser">
+            <column name="iduser" sql-type="int(11)"/>
+        </id>
+        <property name="username">
+            <column name="username" sql-type="varchar(45)" length="45" not-null="true"/>
+        </property>
+        <property name="password">
+            <column name="password" sql-type="varchar(45)" length="45" not-null="true"/>
+        </property>
+        <property name="registryDate">
+            <column name="registry_date" sql-type="varchar(10)" length="10"/>
+        </property>
+        <property name="type">
+            <column name="type" sql-type="varchar(45)" length="45" not-null="true"/>
+        </property>
+        <property name="age">
+            <column name="age" sql-type="int(11)"/>
+        </property>
+        <property name="phoneNumber">
+            <column name="phone_number" sql-type="varchar(45)" length="45"/>
+        </property>
+        <property name="email">
+            <column name="email" sql-type="varchar(45)" length="45"/>
+        </property>
+        <property name="idstore">
+            <column name="idstore" sql-type="int(11)" />
+        </property>
+        <property name="isenable">
+            <column name="isenable" sql-type="tinyint(1)" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>
