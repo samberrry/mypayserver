@@ -4,7 +4,6 @@ import com.google.gson.Gson;
 import models.ManageUser;
 import org.hibernate.SessionFactory;
 import responses.Response;
-
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -26,7 +25,12 @@ public class SignUp extends HttpServlet {
         String password = request.getParameter("password");
         String phone = request.getParameter("phone");
         String email = request.getParameter("email");
-        Integer age = Integer.valueOf(request.getParameter("age"));
+        String ageStr = request.getParameter("age");
+        Integer age = 0;
+        if(ageStr != null)
+        {
+            age = Integer.valueOf(ageStr);
+        }
         //Insert user to database
         Integer id = manageUser.addUser(username,password,"customer",phone,email,age);
         //respond to client
