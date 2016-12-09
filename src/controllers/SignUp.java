@@ -9,6 +9,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.io.PrintWriter;
 
@@ -36,6 +37,8 @@ public class SignUp extends HttpServlet {
         //respond to client
         if (id == 0)
         {
+            HttpSession session = request.getSession();
+            session.setAttribute("username",username);
             Response rsp = new Response();
             rsp.setResultcode(300);
             rsp.setMetadata("Successfully created");
