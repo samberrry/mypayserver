@@ -12,6 +12,12 @@ public class LogEntity {
     private String name;
     private String description;
 
+    public LogEntity(int number, String name, String description) {
+        this.number = number;
+        this.name = name;
+        this.description = description;
+    }
+
     @Id
     @Column(name = "idlog", nullable = false)
     public int getIdlog() {

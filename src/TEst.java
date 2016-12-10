@@ -25,9 +25,11 @@ public class TEst extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        /*response.setContentType("application/json");
+        response.setContentType("application/json");
         PrintWriter printWriter = response.getWriter();
         try{
+            HttpSession session = request.getSession();
+            session.setAttribute("user","hesssaaaamm!!D");
             Response response1 = new Response();
             response1.setMetadata("Halloooo");
             response1.setResultcode(112);
@@ -35,14 +37,15 @@ public class TEst extends HttpServlet {
             String jsonString = gson.toJson(response1,Response.class);
             printWriter.println(jsonString);
         }
-        catch (Exception e){
+        catch (Exception e) {
             printWriter.println("JSON Error");
-        }*/
+        }
+        /*
         HttpSession session = request.getSession();
         session.setAttribute("myatt","Hessam is....!");
         PrintWriter out = response.getWriter();
         out.println(session.getId().toString());
-
+*/
 
     }
 }
