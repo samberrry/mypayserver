@@ -18,6 +18,9 @@ public class LogEntity {
         this.description = description;
     }
 
+    public LogEntity() {
+    }
+
     @Id
     @Column(name = "idlog", nullable = false)
     public int getIdlog() {

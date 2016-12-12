@@ -12,13 +12,13 @@
             <column name="name" sql-type="varchar(45)" length="45"/>
         </property>
         <property name="uuid">
-            <column name="uuid" sql-type="int(11)"/>
+            <column name="uuid" sql-type="varchar(200)" length="200"/>
         </property>
         <property name="majorid">
-            <column name="majorid" sql-type="varchar(45)" length="45" not-null="true"/>
+            <column name="majorid" sql-type="int(11)" not-null="true"/>
         </property>
         <property name="minorid">
-            <column name="minorid" sql-type="varchar(45)" length="45" not-null="true"/>
+            <column name="minorid" sql-type="int(11)" not-null="true"/>
         </property>
         <property name="idstore">
             <column name="idstore" sql-type="int(11)" not-null="true"/>

@@ -3,15 +3,15 @@ package mypaydbmap;
 import javax.persistence.*;
 
 /**
- * Created by Hessam! on 03.12.2016.
+ * Created by Hessam! on 13.12.2016.
  */
 @Entity
 public class BeaconEntity {
     private int idbeacon;
     private String name;
-    private int uuid;
-    private String majorid;
-    private String minorid;
+    private String uuid;
+    private Integer majorid;
+    private Integer minorid;
     private Integer idstore;
 
     @Id
@@ -35,32 +35,32 @@ public class BeaconEntity {
     }
 
     @Basic
-    @Column(name = "uuid", nullable = false)
-    public int getUuid() {
+    @Column(name = "uuid", nullable = false, length = 200)
+    public String getUuid() {
         return uuid;
     }
 
-    public void setUuid(int uuid) {
+    public void setUuid(String uuid) {
         this.uuid = uuid;
     }
 
     @Basic
-    @Column(name = "majorid", nullable = true, length = 45)
-    public String getMajorid() {
+    @Column(name = "majorid", nullable = true)
+    public Integer getMajorid() {
         return majorid;
     }
 
-    public void setMajorid(String majorid) {
+    public void setMajorid(Integer majorid) {
         this.majorid = majorid;
     }
 
     @Basic
-    @Column(name = "minorid", nullable = true, length = 45)
-    public String getMinorid() {
+    @Column(name = "minorid", nullable = true)
+    public Integer getMinorid() {
         return minorid;
     }
 
-    public void setMinorid(String minorid) {
+    public void setMinorid(Integer minorid) {
         this.minorid = minorid;
     }
 
@@ -82,8 +82,8 @@ public class BeaconEntity {
         BeaconEntity that = (BeaconEntity) o;
 
         if (idbeacon != that.idbeacon) return false;
-        if (uuid != that.uuid) return false;
         if (name != null ? !name.equals(that.name) : that.name != null) return false;
+        if (uuid != null ? !uuid.equals(that.uuid) : that.uuid != null) return false;
         if (majorid != null ? !majorid.equals(that.majorid) : that.majorid != null) return false;
         if (minorid != null ? !minorid.equals(that.minorid) : that.minorid != null) return false;
         if (idstore != null ? !idstore.equals(that.idstore) : that.idstore != null) return false;
@@ -95,7 +95,7 @@ public class BeaconEntity {
     public int hashCode() {
         int result = idbeacon;
         result = 31 * result + (name != null ? name.hashCode() : 0);
-        result = 31 * result + uuid;
+        result = 31 * result + (uuid != null ? uuid.hashCode() : 0);
         result = 31 * result + (majorid != null ? majorid.hashCode() : 0);
         result = 31 * result + (minorid != null ? minorid.hashCode() : 0);
         result = 31 * result + (idstore != null ? idstore.hashCode() : 0);
