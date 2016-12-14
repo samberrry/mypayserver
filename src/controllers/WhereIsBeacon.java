@@ -10,7 +10,7 @@ import java.io.IOException;
 /**
  * Created by Hessam! on 13.12.2016.
  */
-@WebServlet(name = "WhereIsBeacon")
+@WebServlet("/getstore")
 public class WhereIsBeacon extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 

@@ -4,8 +4,8 @@ package responses;
  * Created by Hessam! on 05.12.2016.
  */
 public class Response {
-    private int resultcode ;
-    private String metadata;
+     int resultcode ;
+     String metadata;
 
     public Response(int resultcode, String metadata) {
         this.resultcode = resultcode;

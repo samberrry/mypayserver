@@ -4,6 +4,7 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import responses.Response;
+import responses.StoreResponse;
 
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
@@ -30,11 +31,9 @@ public class TEst extends HttpServlet {
         try{
             HttpSession session = request.getSession();
             session.setAttribute("user","hesssaaaamm!!D");
-            Response response1 = new Response();
-            response1.setMetadata("Halloooo");
-            response1.setResultcode(112);
+            StoreResponse response1 = new StoreResponse(500,"meta data",12,"pich pich");
             Gson gson = new Gson();
-            String jsonString = gson.toJson(response1,Response.class);
+            String jsonString = gson.toJson(response1,StoreResponse.class);
             printWriter.println(jsonString);
         }
         catch (Exception e) {
