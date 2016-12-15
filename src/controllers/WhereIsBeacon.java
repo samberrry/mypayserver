@@ -33,7 +33,7 @@ public class WhereIsBeacon extends HttpServlet {
         {
             HttpSession session = request.getSession();
             session.setAttribute("currentstore",store);
-            StoreResponse rsp = new StoreResponse(500,"store was detected",store.getIdstore(),store.getName());
+            StoreResponse rsp = new StoreResponse(500,"store is detected",store.getIdstore(),store.getName());
             Gson gson = new Gson();
             String jsonString = gson.toJson(rsp,StoreResponse.class);
             PrintWriter printWriter = response.getWriter();
