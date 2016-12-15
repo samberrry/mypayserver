@@ -1,5 +1,6 @@
 package models;
 
+import mypaydbmap.StoreEntity;
 import org.hibernate.SessionFactory;
 
 /**
@@ -9,6 +10,11 @@ public class ManageBeacon {
     SessionFactory sessionFactory ;
     public ManageBeacon(SessionFactory sessionFactory) {
         this.sessionFactory = sessionFactory;
+    }
+
+    public StoreEntity getStore(String uuid,int major,int minor)
+    {
+        return null;
     }
 
 }
