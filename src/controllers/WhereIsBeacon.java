@@ -2,13 +2,9 @@ package controllers;
 
 import com.google.gson.Gson;
 import models.ManageBeacon;
-import models.ManageUser;
-import mypaydbmap.BeaconEntity;
 import mypaydbmap.StoreEntity;
 import org.hibernate.SessionFactory;
-import responses.Response;
 import responses.StoreResponse;
-
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
