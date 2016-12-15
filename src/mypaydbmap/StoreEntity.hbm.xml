@@ -20,5 +20,9 @@
         <property name="telephone">
             <column name="telephone" sql-type="varchar(45)" length="45" not-null="true"/>
         </property>
+        <set name="beacons" cascade="all">
+            <key column="idstore"/>
+            <one-to-many class="mypaydbmap.BeaconEntity"/>
+        </set>
     </class>
 </hibernate-mapping>

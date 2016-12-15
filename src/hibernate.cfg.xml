@@ -13,7 +13,7 @@
     <!--<mapping resource="mypaydbmap/PresenceEntity.hbm.xml"/>-->
     <!--<mapping resource="mypaydbmap/PurchaseEntity.hbm.xml"/>-->
     <!--<mapping resource="mypaydbmap/PurchaseHasGoodsEntity.hbm.xml"/>-->
-    <!--<mapping resource="mypaydbmap/StoreEntity.hbm.xml"/>-->
+    <mapping resource="mypaydbmap/StoreEntity.hbm.xml"/>
     <mapping resource="mypaydbmap/UserEntity.hbm.xml"/>
     <mapping resource="mypaydbmap/BeaconEntity.hbm.xml"/>
     <mapping class="mypaydbmap.BeaconEntity"/>

@@ -1,5 +1,6 @@
 package mypaydbmap;
 
+import java.util.*;
 import javax.persistence.*;
 
 /**
@@ -12,6 +13,19 @@ public class StoreEntity {
     private String subscriptionDate;
     private String address;
     private String telephone;
+    private Set beacons;
+
+    public StoreEntity() {
+    }
+
+    public StoreEntity(int idstore, String name, String subscriptionDate, String address, String telephone, Set beacons) {
+        this.idstore = idstore;
+        this.name = name;
+        this.subscriptionDate = subscriptionDate;
+        this.address = address;
+        this.telephone = telephone;
+        this.beacons = beacons;
+    }
 
     @Id
     @Column(name = "idstore", nullable = false)
@@ -88,5 +102,13 @@ public class StoreEntity {
         result = 31 * result + (address != null ? address.hashCode() : 0);
         result = 31 * result + (telephone != null ? telephone.hashCode() : 0);
         return result;
+    }
+
+    public Set getBeacons() {
+        return beacons;
+    }
+
+    public void setBeacons(Set beacons) {
+        this.beacons = beacons;
     }
 }
