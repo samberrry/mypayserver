@@ -56,12 +56,9 @@ public class SmsVerification extends HttpServlet {
 
             rsp.setResultcode(700);
             rsp.setMetadata("SMS has been sent");
-        }catch (ApiException e){
+        }catch (Exception e){
             rsp.setResultcode(701);
             rsp.setMetadata("SMS Parameter error");
-        }catch (HttpException e){
-            rsp.setResultcode(705);
-            rsp.setMetadata("SMS WebService error");
         }
         Gson gson = new Gson();
         String jsonString = gson.toJson(rsp,Response.class);
