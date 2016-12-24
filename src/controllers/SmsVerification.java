@@ -22,8 +22,6 @@ import com.kavenegar.sdk.excepctions.ApiException;
  */
 @WebServlet("/smsverification")
 public class SmsVerification extends HttpServlet {
-    //Properties
-    KavenegarApi api = new KavenegarApi("70677175415870435A78384C71692B327373484F75413D3D");
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 //set MIME type to JSON
@@ -52,6 +50,7 @@ public class SmsVerification extends HttpServlet {
         Response rsp = new Response();
         try{
             SendResult result;
+            KavenegarApi api = new KavenegarApi("70677175415870435A78384C71692B327373484F75413D3D");
             result = api.Send("10006707323323",phone,"MyPay Verification Code: "+random);
             System.out.println(result.getStatusText());
 
