@@ -47,7 +47,7 @@ public class TEst extends HttpServlet {
         PrintWriter out = response.getWriter();
         out.println(session.getId().toString());
 */
-        response.setContentType("application/json");
+        /*response.setContentType("application/json");
         ManageBeacon manageBeacon = new ManageBeacon((SessionFactory) getServletContext().getAttribute("sessionfactoryobj"));
 
         StoreEntity store = manageBeacon.getStore("163EB541-B100-4BA5-8652-EB0C513FB0F4",5,10);
@@ -61,7 +61,7 @@ public class TEst extends HttpServlet {
             String jsonString = gson.toJson(rsp,StoreResponse.class);
             PrintWriter printWriter = response.getWriter();
             printWriter.println(jsonString);
-        }
+        }*/
         /*else {
             StoreResponse storeResponse = new StoreResponse(510,"The store could not be detected",0,null);
             Gson gson = new Gson();
