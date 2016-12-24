@@ -2,7 +2,6 @@ package controllers;
 
 import com.google.gson.Gson;
 import com.kavenegar.sdk.KavenegarApi;
-import com.kavenegar.sdk.excepctions.HttpException;
 import com.kavenegar.sdk.models.SendResult;
 import responses.Response;
 import javax.servlet.ServletException;
@@ -14,8 +13,6 @@ import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Random;
-
-import com.kavenegar.sdk.excepctions.ApiException;
 
 /**
  * Created by Hessam! on 24.12.2016.
