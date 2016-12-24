@@ -49,7 +49,8 @@ public class SmsVerification extends HttpServlet {
             SendResult result;
             KavenegarApi api = new KavenegarApi("70677175415870435A78384C71692B327373484F75413D3D");
             result = api.Send("10006707323323",phone,"MyPay Verification Code: "+random);
-            System.out.println(result.getStatusText());
+//            System.out.println(result.getStatusText());
+            System.out.println(random);
 
             rsp.setResultcode(700);
             rsp.setMetadata("SMS has been sent");
