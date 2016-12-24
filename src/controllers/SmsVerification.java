@@ -48,7 +48,7 @@ public class SmsVerification extends HttpServlet {
         session.setAttribute("phone",phone);
         session.setAttribute("email",email);
         session.setAttribute("age",age);
-        session.setAttribute("randon",random);
+        session.setAttribute("random",random);
         Response rsp = new Response();
         try{
             SendResult result;
